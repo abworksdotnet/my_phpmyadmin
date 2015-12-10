@@ -1,0 +1,16 @@
+Site : http://ab-works.net/
+
+Apporter pour le 05/01/2016 les fonctionnalités suivantes à ce site :
+
+Réécrire le code :
+- Développer en MVC
+- Coder en POO
+
+Ajouts de fonctionnalités :
+- Afficher une table avec ses 1000 premiers enregistrements
+- Pouvoir éditer et sauvegarder des modifications faites à ces enregistrements.
+
+Rédiger des tests unitaires :
+- PHP
+- JavaScript
+- SQL

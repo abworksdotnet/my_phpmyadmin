@@ -1,27 +1,52 @@
-<!DOCTYPE HTML>
-<html ng-app>
-    <head>
-    	<title>ab-works</title>
-    	<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
-        <link href="content/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body class="background">
-        <br />
-        <div class="container">
-            <div class="row">
-                <div class="span4 offset4 well">
-                    <IMG SRC="content/accueil.jpg" ALT="my_phpmyadmin" TITLE="my_phpmyadmin">
-                    <legend class="text-center">Welcome !</legend>
-                    <form action="content/login.php" method="post" accept-charset="UTF-8">
-                        <input type="text" id="login" class="span4" name="login" placeholder="Login">
-                        <input type="password" id="password" class="span4" name="password" placeholder="Password">
-                        <input type="submit" value="Connexion" class="btn btn-info btn-block"/>
-                    </form>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ab-works</title>
+    <link href="medias/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Bootstrap -->
+    <link href="frameworks/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="frameworks/bootstrap/css/bootstrap-custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="bg-customGrey">
+</br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 text-center custom-max-width-300px well">
+            <IMG SRC="medias/accueil.jpg" class="img-rounded img-responsive center-block">
+            <legend class="text-center">Welcome !</legend>
+            <div class="form-group">
+                <form action="connection.php" method="post" accept-charset="UTF-8">
+                    <div class="form-group">
+                        <input type="text" id="login" class="form-control" name="login" placeholder="Login">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Connexion" class="btn btn-custom btn-block"/>
+                    </div>
+                </form>
             </div>
         </div>
-        <script type="text/javascript" src="bootstrap/jquery/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    </body>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>

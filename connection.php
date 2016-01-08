@@ -6,17 +6,17 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     $login = htmlspecialchars($_POST['login']);
     $pwd = htmlspecialchars($_POST['password']);
     try {
-        $dbo = new PDO('mysql:host=localhost;dbname=mpma', 'abworks', 'abworks');
+        $dbo = new PDO('mysql:host=localhost;dbname=classicmodels', 'abworks', 'abworks');
     } catch
     (Exception $e) {
         die($errorMessage->error());
     }
-    $login_check = $dbo->query("SELECT COUNT(*) FROM mpma.logins WHERE login = '" . $login . "'");
+    $login_check = $dbo->query("SELECT COUNT(*) FROM classicmodels.logins WHERE login = '" . $login . "'");
 
     if ($login_check->fetchColumn() == 0) {
         die($errorMessage->error());
     } else {
-        $reponse_login = $dbo->query("SELECT password FROM mpma.logins WHERE login ='" . $login . "' LIMIT 1");
+        $reponse_login = $dbo->query("SELECT password FROM classicmodels.logins WHERE login ='" . $login . "' LIMIT 1");
         $donnees = $reponse_login->fetch();
 
         if ($pwd == $donnees['password']) {

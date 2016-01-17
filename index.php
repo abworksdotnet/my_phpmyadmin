@@ -27,7 +27,7 @@
             <IMG SRC="medias/accueil.jpg" class="img-rounded img-responsive center-block">
             <legend class="text-center">Welcome !</legend>
             <div class="form-group">
-                <form action="connection.php" method="post" accept-charset="UTF-8">
+                <form action="login.php" method="post" accept-charset="UTF-8">
                     <div class="form-group">
                         <input type="text" id="login" class="form-control" name="login" placeholder="Login">
                     </div>

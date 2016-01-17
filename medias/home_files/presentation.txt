@@ -1,0 +1,20 @@
+﻿Ce site, encore en construction, est un projet personnel reprenant quelques-unes des fonctionnalités de <a href="https://www.phpmyadmin.net/">phpMyAdmin</a> que je développe en autodidacte dans le but de me familiariser au développement web.
+Son code source est disponible sur GitHub (lien ci-dessus sur la barre des menus).
+
+Ce site permet de :
+- Se connecter à une base de connées.
+- Afficher des informations sur cette base de données et les tables qu'il contient.
+- Afficher le contenu des tables.
+- Editer le contenu de cette base de données.
+
+Ressources utilisées aujourd'hui :
+- PHP + MySQL + JavaScript
+- Le patron MVC.
+- La POO.
+- Twitter Bootstrap.
+- jQuery.
+
+Sur cette page d'accueil vous trouverez également :
+- Statuts : Le détail de ce qui est fait, ce qui est en cours et ce qui est prévu.
+- Notes : Un journal de bord sur le développement de ce site.
+- Contact : mon CV.

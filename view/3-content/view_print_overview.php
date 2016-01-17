@@ -1,7 +1,7 @@
 <?php
-class buildBody
+class buildOverview
 {
-    public function printBody($db_info, $tb_info, $array_info, $error)
+    public function printOverview($db_info, $tb_info, $array_info)
     {
         ?>
         <div class="container-fluid">
@@ -16,7 +16,7 @@ class buildBody
                 }
 
                 if (isset($_GET['database']) && isset($_GET['table'])) {
-                    $this->printArray($array_info, $error);
+                    $this->printArray($array_info);
                 }
 
                 ?>
@@ -96,16 +96,9 @@ class buildBody
         <?php
     }
 
-    private function printArray($array_info, $error)
+    private function printArray($array_info)
     {
         if (isset($_GET['database']) && isset($_GET['table'])) {
-            $db_name = $_GET['database'];
-            $tb_name = $_GET['table'];
-            $sql = 'SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = ' . '\'' . $db_name . '\'' . ' AND TABLE_NAME LIKE' . '\'' . $tb_name . '\'';
-            $dbo = new PDO('mysql:charset=utf8mb4;host=localhost;dbname=' . $db_name, $_SESSION['login'], $_SESSION['password']);
-        }
-        $result = $dbo->query($sql);
-        if ($result->fetchColumn() > 0) {
             $array_row = $array_info->arrayRow();
             $array_result = $array_info->arrayResult();
             ?>
@@ -136,7 +129,5 @@ class buildBody
             </div>
             <?php
         }
-        else
-            die($error->postError('Table ' . $tb_name . ' not found'));
     }
 }
